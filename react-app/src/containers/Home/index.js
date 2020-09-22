@@ -1,5 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
+import SearchBar from "../../components/SearchBar";
 
 export default function () {
-  return <div>testingHome</div>;
+  return (
+    <Fragment>
+      <SearchBar />
+    </Fragment>
+  );
 }

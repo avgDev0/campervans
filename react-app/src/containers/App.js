@@ -5,9 +5,11 @@ import RentalDetail from "./RentalDetail";
 
 export default function App() {
   return (
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/rental/:rentalId" exact component={RentalDetail} />
-    </Switch>
+    <div className="container">
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/rental/:rentalId" exact component={RentalDetail} />
+      </Switch>
+    </div>
   );
 }
