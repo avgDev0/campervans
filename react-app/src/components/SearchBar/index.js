@@ -1,37 +1,38 @@
-import React, { Component } from "react";
-import { TextField, Button } from "@material-ui/core";
+import React, { useState } from "react";
+import { TextField, Button, Grid, Typography } from "@material-ui/core";
 
-export default class SearchBar extends Component {
-  state = {
-    text: "",
-  };
+export default () => {
+  const [filters, setFilters] = useState("");
 
-  handleSubmit = () => console.log(this.state.text);
+  const handleFilterClick = () => console.log(filters);
 
-  handleInputChange = (ev) => {
-    this.setState({ text: ev.target.value });
-  };
+  const handleInputChange = ({ target: { value } }) => setFilters(value);
 
-  render() {
-    return (
-      <div className="search-box">
-        <div className="input-field">
-          <TextField
-            label="Filter"
-            onChange={this.handleInputChange}
-            fullWidth
-          />
-        </div>
-        <div className="filter-button">
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={this.handleSubmit}
-          >
-            Filter
-          </Button>
-        </div>
-      </div>
-    );
-  }
-}
+  return (
+    <Grid container className="search-box" spacing={1}>
+      <Grid item xs={12}>
+        <Typography variant="h4">Campervans</Typography>
+      </Grid>
+      <Grid
+        item
+        xs={9}
+        md={4}
+        className="input-field"
+        style={{ alignSelf: "end" }}
+      >
+        <TextField label="Filter" onChange={handleInputChange} fullWidth />
+      </Grid>
+      <Grid
+        item
+        xs={3}
+        md={1}
+        className="filter-button"
+        style={{ alignSelf: "end" }}
+      >
+        <Button variant="contained" color="primary" onClick={handleFilterClick}>
+          Filter
+        </Button>
+      </Grid>
+    </Grid>
+  );
+};
