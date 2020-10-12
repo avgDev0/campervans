@@ -3,12 +3,14 @@ import { Grid, Button } from "@material-ui/core";
 
 export default () => {
   return (
-    <Grid item xs={12} style={{ alignSelf: "end" }}>
-      <Grid container justify="center">
-        <Grid item xs={8} md={4}>
-          Testington
-        </Grid>
-      </Grid>
+    <Grid container className="load-more" justify="center">
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => console.log("Load clik")}
+      >
+        Load More
+      </Button>
     </Grid>
   );
 };

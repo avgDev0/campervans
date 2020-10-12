@@ -9,35 +9,17 @@ export default () => {
   const handleInputChange = ({ target: { value } }) => setFilters(value);
 
   return (
-    <Grid item xs={12}>
-      <Grid container className="search-box" spacing={1}>
-        <Grid item xs={12}>
-          <Typography variant="h4">Campervans</Typography>
-        </Grid>
-        <Grid
-          item
-          xs={9}
-          md={4}
-          className="input-field"
-          style={{ alignSelf: "end" }}
-        >
-          <TextField label="Filter" onChange={handleInputChange} fullWidth />
-        </Grid>
-        <Grid
-          item
-          xs={3}
-          md={1}
-          className="filter-button"
-          style={{ alignSelf: "end" }}
-        >
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={handleFilterClick}
-          >
-            Filter
-          </Button>
-        </Grid>
+    <Grid container className="search-box" spacing={1}>
+      <Grid item xs={12}>
+        <Typography variant="h4">Campervans</Typography>
+      </Grid>
+      <Grid item xs={9} md={4} className="input-field">
+        <TextField label="Filter" onChange={handleInputChange} fullWidth />
+      </Grid>
+      <Grid item xs={3} md={1} className="filter-button">
+        <Button variant="contained" color="primary" onClick={handleFilterClick}>
+          Filter
+        </Button>
       </Grid>
     </Grid>
   );

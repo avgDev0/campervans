@@ -1,0 +1,22 @@
+.container {
+  height: 99vh;
+}
+
+.filter-button,
+.input-field {
+  align-self: flex-end;
+}
+
+.search-box {
+  order: 0;
+}
+
+.load-more {
+  order: 2;
+  flex-grow: 1;
+}
+
+.search-results {
+  order: 1;
+  flex-basis: 80%;
+}
