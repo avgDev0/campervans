@@ -3,12 +3,12 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { green } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: green[500],
-    },
-    text: {
-      primary: "rgb(255, 255, 255) !important",
+  overrides: {
+    MuiButton: {
+      containedPrimary: {
+        backgroundColor: green[500],
+        color: "rgb(255, 255, 255) !important",
+      },
     },
   },
   typography: {
