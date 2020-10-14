@@ -1,8 +1,8 @@
 import React from "react";
+import { Grid } from "@material-ui/core";
 import SearchBar from "../components/SearchBar";
 import LoadMoreButton from "../components/LoadMoreButton";
 import SearchResults from "../components/SearchResults";
-import { Grid } from "@material-ui/core";
 
 export default function () {
   return (
