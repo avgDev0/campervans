@@ -9,8 +9,14 @@ export default function () {
   const [rentals, setRentals] = useState([]);
 
   useEffect(() => {
-    setRentals(getRentals());
-  });
+    async function fetchData() {
+      const data = await getRentals();
+
+      setRentals(data);
+    }
+
+    fetchData();
+  }, []);
 
   return (
     <Grid container className="container" spacing={1} direction="column">
