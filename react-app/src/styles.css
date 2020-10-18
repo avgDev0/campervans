@@ -20,3 +20,8 @@
   order: 1;
   flex-basis: 80%;
 }
+
+.search-results > .result-item {
+  min-height: 25%;
+  border: 1px dashed blue;
+}
